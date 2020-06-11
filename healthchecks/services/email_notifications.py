@@ -6,7 +6,7 @@ import settings
 from controller.healthservicehandler import HandleService
 
 # Microservice URL
-service_url = settings.server_name
+service_url = settings.email_server_name
 
 class EmailService(HandleService):
 
