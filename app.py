@@ -36,8 +36,9 @@ def healthChecktimer():
     CompanyHandler = CompanySettingsService()
     CompanyHandlerHealthCheck = checker.process_service_check(CompanyHandler.create_service_url())
     
-    print(UserhandlerHealthCheck, SmsNotificationHandlerHealthCheck, ManagePageHandlerHealthCheck, EmailHandlerHealthCheck, CompanyHandlerHealthCheck, AuthHandlerHealthCheck)
-    
+    microservices = (UserhandlerHealthCheck, SmsNotificationHandlerHealthCheck, ManagePageHandlerHealthCheck, EmailHandlerHealthCheck, CompanyHandlerHealthCheck, AuthHandlerHealthCheck)
+    for service in microservices:
+        print(service)
     #print(AuthHandlerHealthCheck)
 
 healthChecktimer()
