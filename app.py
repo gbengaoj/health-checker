@@ -15,11 +15,11 @@ def healthChecktimer():
     # Authentication Microservices Health Check
     AuthHandler = AuthService()
     AuthHandlerHealthCheck = checker.process_service_check(AuthHandler.create_service_url())
-
+    
     # Managing Users Microservices Health Check
     Userhandler = UserService()
     UserhandlerHealthCheck = checker.process_service_check(Userhandler.create_service_url())
-
+    
     # SMS Notifications Microservices Health Check
     SmsNotificationHandler = SmsService()
     SmsNotificationHandlerHealthCheck = checker.process_service_check(SmsNotificationHandler.create_service_url())
@@ -37,8 +37,8 @@ def healthChecktimer():
     CompanyHandlerHealthCheck = checker.process_service_check(CompanyHandler.create_service_url())
     
     print(UserhandlerHealthCheck, SmsNotificationHandlerHealthCheck, ManagePageHandlerHealthCheck, EmailHandlerHealthCheck, CompanyHandlerHealthCheck, AuthHandlerHealthCheck)
-    
-    #print(AuthHandlerHealthCheck)
+
+    #print(AuthHandlerHealthCheck, UserhandlerHealthCheck)
 
 healthChecktimer()
 

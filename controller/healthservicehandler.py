@@ -17,6 +17,7 @@ class HandleService:
     result = [] 
 
     def process_service_check(self, service):
+        self.result = []
         microservice = 0
         microservices = len(service)
         while microservice < microservices:
