@@ -53,17 +53,3 @@ class HandleService:
             self.result.append(self.output['Health-Check Status'])
         self.output['Last Update Time'] = now
         self.result.append(self.output['Last Update Time'])
-
-"""
-web = [
-        'https://google.com',
-        'https://facebook.com',
-        'https://games.com',
-        'https://microapi.dev',
-        'https://auth.microapi.dev'
-        ]
-
-
-a = HandleService()
-print(a.process_service_check(web))
-"""
