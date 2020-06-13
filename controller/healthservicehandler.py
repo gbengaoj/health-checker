@@ -18,11 +18,13 @@ class HandleService:
 
     def process_service_check(self, service):
         self.result = []
+        """
         microservice = 0
         microservices = len(service)
         while microservice < microservices:
             self.check_service_health(service[microservice])
-            microservice += 1
+            microservice += 1"""
+        self.check_service_health(service)
         return self.result
 
     # Check the service status and availabilty
